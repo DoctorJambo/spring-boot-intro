@@ -53,6 +53,9 @@ public class BookRepositoryImpl implements BookRepository {
         try (Session session = factory.openSession()) {
             Book book = session.find(Book.class, id);
             return Optional.ofNullable(book);
+        } catch (Exception e) {
+            throw new DataProcessingException("DB layer error when attempting "
+                    +   "to access the object ", e);
         }
     }
 }

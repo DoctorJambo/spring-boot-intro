@@ -55,7 +55,7 @@ public class BookRepositoryImpl implements BookRepository {
             return Optional.ofNullable(book);
         } catch (Exception e) {
             throw new DataProcessingException("DB layer error when attempting "
-                    +   "to access the object ", e);
+                    + "to access the object ", e);
         }
     }
 }

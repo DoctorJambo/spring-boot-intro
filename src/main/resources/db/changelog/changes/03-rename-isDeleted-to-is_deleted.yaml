@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: rename-isDeleted-to-is_deleted
+      author: vlad
+      changes:
+        - renameColumn:
+            tableName: books
+            oldColumnName: isDeleted
+            newColumnName: is_deleted
+            columnDataType: BOOLEAN

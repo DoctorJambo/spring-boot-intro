@@ -48,7 +48,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
 
               - column:
-                  name: isDeleted
+                  name: is_deleted
                   type: BIT
                   defaultValueBoolean: false
                   constraints:

@@ -5,8 +5,8 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.example.springbootintro.dto.BookSearchParametersDto;
 import org.example.springbootintro.model.Book;
-import org.example.springbootintro.repository.book.specificationtype.AuthorSpecification;
-import org.example.springbootintro.repository.book.specificationtype.TitlePartSpecification;
+import org.example.springbootintro.repository.specificationprovider.impl.AuthorSpecification;
+import org.example.springbootintro.repository.specificationprovider.impl.TitlePartSpecification;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 

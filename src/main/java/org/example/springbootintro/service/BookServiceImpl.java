@@ -8,8 +8,8 @@ import org.example.springbootintro.dto.CreateBookRequestDto;
 import org.example.springbootintro.exception.EntityNotFoundException;
 import org.example.springbootintro.mapper.BookMapper;
 import org.example.springbootintro.model.Book;
-import org.example.springbootintro.repository.BookRepository;
 import org.example.springbootintro.repository.BookSpecificationBuilder;
+import org.example.springbootintro.repository.mainrepository.BookRepository;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 

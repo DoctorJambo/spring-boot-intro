@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class TitlePartSpecification implements SpecificationProvider<Book> {
+    private static final String TITLE = "title";
 
     @Override
     public Specification<Book> getSpecification(String param) {
@@ -23,7 +24,7 @@ public class TitlePartSpecification implements SpecificationProvider<Book> {
                     @NonNull CriteriaQuery<?> query,
                     @NonNull CriteriaBuilder cb) {
 
-                return cb.like(root.get("title"), "%" + param + "%");
+                return cb.like(root.get(TITLE), "%" + param + "%");
             }
         };
     }

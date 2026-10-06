@@ -1,4 +1,4 @@
-package org.example.springbootintro.repository.specification_provider;
+package org.example.springbootintro.repository.specificationprovider;
 
 import org.springframework.data.jpa.domain.Specification;
 

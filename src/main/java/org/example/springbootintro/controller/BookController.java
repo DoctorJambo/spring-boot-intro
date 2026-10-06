@@ -89,7 +89,9 @@ public class BookController {
     @ApiResponse(responseCode = "200", description = "Books found")
     @ApiResponse(responseCode = "400", description = "wrong request params")
     @GetMapping("/search")
-    public Page<BookDto> search(@RequestBody BookSearchParametersDto searchParameters, Pageable pageable) {
+    public Page<BookDto> search(
+            @RequestBody BookSearchParametersDto searchParameters,
+            Pageable pageable) {
         return bookService.search(searchParameters, pageable);
     }
 }

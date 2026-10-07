@@ -2,7 +2,7 @@ package org.example.springbootintro.service;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import org.example.springbootintro.customannotation.StartWithUpper;
+import org.example.springbootintro.annotations.StartWithUpper;
 
 public class WordsStyleValidator implements ConstraintValidator<StartWithUpper, String> {
     @Override

@@ -1,4 +1,4 @@
-package org.example.springbootintro.customannotation;
+package org.example.springbootintro.annotations;
 
 import jakarta.validation.Constraint;
 import java.lang.annotation.ElementType;

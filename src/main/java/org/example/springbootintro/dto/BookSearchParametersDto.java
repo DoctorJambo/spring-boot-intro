@@ -1,4 +1,7 @@
 package org.example.springbootintro.dto;
 
-public record BookSearchParametersDto(String titlePart, String author) {
+import jakarta.validation.constraints.NotBlank;
+
+public record BookSearchParametersDto(@NotBlank String titlePart, @NotBlank String author) {
+
 }

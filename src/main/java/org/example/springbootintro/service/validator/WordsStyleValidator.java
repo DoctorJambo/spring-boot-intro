@@ -1,4 +1,4 @@
-package org.example.springbootintro.service;
+package org.example.springbootintro.service.validator;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;

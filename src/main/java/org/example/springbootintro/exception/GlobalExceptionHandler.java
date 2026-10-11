@@ -40,6 +40,15 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, headers, BAD_REQUEST);
     }
 
+    private String getErrorMessage(ObjectError e) {
+        if (e instanceof FieldError fieldError) {
+            String field = fieldError.getField();
+            String message = e.getDefaultMessage();
+            return field + " " + message;
+        }
+        return e.getDefaultMessage();
+    }
+
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<Object> handleEntityNotFoundException(
             EntityNotFoundException ex
@@ -51,13 +60,13 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(body, NOT_FOUND);
     }
 
-    private String getErrorMessage(ObjectError e) {
-        if (e instanceof FieldError fieldError) {
-            String field = fieldError.getField();
-            String message = e.getDefaultMessage();
-            return field + " " + message;
-        }
-        return e.getDefaultMessage();
-    }
+    @ExceptionHandler(RegistrationException.class)
+    public ResponseEntity<Object> handleRegistrationException(
+            RegistrationException ex
+    ) {
+        Map<String, Object> body = new LinkedHashMap<>();
+        body.put("timestamp", LocalDateTime.now());
 
+        return new ResponseEntity<>(body, BAD_REQUEST);
+    }
 }

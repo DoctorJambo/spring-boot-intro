@@ -1,9 +1,9 @@
 package org.example.springbootintro.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.springbootintro.dto.BookDto;
-import org.example.springbootintro.dto.BookSearchParametersDto;
-import org.example.springbootintro.dto.CreateBookRequestDto;
+import org.example.springbootintro.dto.book.BookDto;
+import org.example.springbootintro.dto.book.BookSearchParametersDto;
+import org.example.springbootintro.dto.book.CreateBookRequestDto;
 import org.example.springbootintro.exception.EntityNotFoundException;
 import org.example.springbootintro.mapper.BookMapper;
 import org.example.springbootintro.model.Book;

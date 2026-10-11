@@ -3,7 +3,7 @@ package org.example.springbootintro.repository;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.example.springbootintro.dto.BookSearchParametersDto;
+import org.example.springbootintro.dto.book.BookSearchParametersDto;
 import org.example.springbootintro.model.Book;
 import org.example.springbootintro.repository.specificationprovider.impl.AuthorSpecification;
 import org.example.springbootintro.repository.specificationprovider.impl.TitlePartSpecification;

@@ -78,8 +78,8 @@ public class BookController {
     }
 
     @Operation(summary = "delete by id", description = "mark entity like is_deleted")
-    @DeleteMapping("/{id}")
     @ApiResponse(responseCode = "204", description = "Book deleted")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBookById(@PathVariable Long id) {
         bookService.deleteById(id);

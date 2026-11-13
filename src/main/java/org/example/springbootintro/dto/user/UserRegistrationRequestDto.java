@@ -18,7 +18,6 @@ public class UserRegistrationRequestDto {
     @NotBlank
     private String lastName;
 
-    @NotBlank
     private String shippingAddress;
 
     @NotBlank

@@ -1,4 +1,4 @@
-package org.example.springbootintro.service;
+package org.example.springbootintro.service.validator;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
@@ -7,6 +7,9 @@ import org.example.springbootintro.annotations.StartWithUpper;
 public class WordsStyleValidator implements ConstraintValidator<StartWithUpper, String> {
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
+        if (value == null || value.isBlank()) {
+            return true;
+        }
         return Character.isUpperCase(value.charAt(0));
     }
 }

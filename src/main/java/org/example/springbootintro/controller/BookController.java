@@ -5,9 +5,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.springbootintro.dto.BookDto;
-import org.example.springbootintro.dto.BookSearchParametersDto;
-import org.example.springbootintro.dto.CreateBookRequestDto;
+import org.example.springbootintro.dto.book.BookDto;
+import org.example.springbootintro.dto.book.BookSearchParametersDto;
+import org.example.springbootintro.dto.book.CreateBookRequestDto;
 import org.example.springbootintro.service.BookService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -78,8 +78,8 @@ public class BookController {
     }
 
     @Operation(summary = "delete by id", description = "mark entity like is_deleted")
-    @DeleteMapping("/{id}")
     @ApiResponse(responseCode = "204", description = "Book deleted")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteBookById(@PathVariable Long id) {
         bookService.deleteById(id);
